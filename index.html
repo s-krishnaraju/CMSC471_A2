@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMSC471 Assignment #2</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css">
+
+</head>
+
+<body>
+
+    <div style="text-align: center;">
+        <h1 style="margin: 20px;">CMSC471 Assignment 2: Senthoor Krishnaraju </h1>
+        <div style="display: flex; flex-direction: row;">
+            <div id='myDiv' style="width: 1000px; height: 600px;"></div>
+            <div id="myPieChart" style="width: 950px; margin: 30px auto;"></div>
+    
+        </div>
+        <div id="sliderContainer"
+            style="width: 1000px; margin: 100px auto 30px; padding: 15px; background-color: #f8f8f8; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,.1);">
+            <div id="sliderTitle" style="font-weight: bold; margin-bottom: 10px;">Filter Airports by Passengers Enplaned
+            </div>
+            <div id="rangeContainer" style="display: flex; align-items: center; gap: 10px;">
+                <span id="minLabel" style="width: 60px;"></span>
+                <div id="rangeSlider" style="flex: 1;"></div>
+                <span id="maxLabel" style="width: 60px; text-align: right;"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load Plotly and D3.js -->
+    <script src='https://cdn.plot.ly/plotly-3.0.0.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
