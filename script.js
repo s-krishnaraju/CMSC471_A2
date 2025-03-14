@@ -71,22 +71,19 @@ let colorScale = [
 
 let topAirportColors = {
     0: 'rgb(204, 51, 163)',
-    1: 'rgb(220, 57, 18)',
+    1: 'rgb(168, 79, 57)',
     2: 'rgb(255, 153, 0)',
     3: 'rgb(16, 150, 24)',
     4: 'rgb(137, 10, 221)',
     5: 'rgb(49, 247, 0)',
     6: 'rgb(221, 68, 119)',
     7: 'rgb(8, 228, 206)',
-    8: 'rgb(184, 46, 46)',
+    8: 'rgb(255, 0, 0)',
     9: 'rgb(156, 215, 5)',
 };
 
 const getAirportColors = () =>
     Object.keys(topAirportColors).map(i => topAirportColors[i])
-
-
-
 
 function updatePieChart(airports) {
     const airportNames = airports.map(row => row.Airport);

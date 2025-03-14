@@ -12,23 +12,78 @@
 
 <body>
 
-    <div style="text-align: center;">
-        <h1 style="margin: 20px;">CMSC471 Assignment 2: Senthoor Krishnaraju </h1>
-        <div style="display: flex; flex-direction: row;">
-            <div id='myDiv' style="width: 1000px; height: 600px;"></div>
-            <div id="myPieChart" style="width: 950px; margin: 30px auto;"></div>
-    
-        </div>
-        <div id="sliderContainer"
-            style="width: 1000px; margin: 100px auto 30px; padding: 15px; background-color: #f8f8f8; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,.1);">
-            <div id="sliderTitle" style="font-weight: bold; margin-bottom: 10px;">Filter Airports by Passengers Enplaned
-            </div>
-            <div id="rangeContainer" style="display: flex; align-items: center; gap: 10px;">
-                <span id="minLabel" style="width: 60px;"></span>
-                <div id="rangeSlider" style="flex: 1;"></div>
-                <span id="maxLabel" style="width: 60px; text-align: right;"></span>
-            </div>
-        </div>
+    <div>
+        <h3 style="margin: 20px;">CMSC471 Assignment 2: Senthoor Krishnaraju </h1>
+
+            <h1 style="text-align: center; margin-bottom: 50px;">Passengers Enplaned Across U.S. Airports in 2024</h2>
+                <div style="display: flex; flex-direction: row;">
+                    <div id='myDiv' style="width: 1000px; height: 600px;"></div>
+                    <div id="myPieChart" style="width: 950px; margin: 30px auto;"></div>
+
+                </div>
+                <div id="sliderContainer"
+                    style="width: 900px; margin-top: 50px auto 30px; padding: 15px; background-color: #f8f8f8; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,.1); text-align: center;">
+                    <div id="sliderTitle" style="font-weight: bold; margin-bottom: 10px;">Filter Airports by Passengers
+                        Enplaned
+                    </div>
+                    <div id="rangeContainer" style="display: flex; align-items: center; gap: 10px;">
+                        <span id="minLabel" style="width: 60px;"></span>
+                        <div id="rangeSlider" style="flex: 1;"></div>
+                        <span id="maxLabel" style="width: 60px; text-align: right;"></span>
+                    </div>
+                </div>
+                <h1 style="text-align: center; margin-top: 50px;">Write Up</h2>
+
+                    <div id="myText"
+                        style="gap:5px;margin: 20px; text-align: center; display: flex; flex-direction: row;">
+                        <div style="flex: .1;">
+                            <h3>Introduction</h3>
+                            <p>This dataset is from the <a
+                                    href="https://www.bts.gov/browse-statistical-products-and-data/state-transportation-statistics/us-airline-traffic-airport">Bureau
+                                    of Transport Statistics</a> and shows the number of passengers
+                                that each U.S. airport enplanned (boarded onto a plane) in the year of 2024. </p>
+                        </div>
+                        <div style="flex: .4;">
+                            <h3>Design Decisions</h3>
+                            <p>The main visualizations are a Scatter Map and a Pie Chart. The Scatter Map shows the
+                                location of each airport and info about the airport on hover (name, location, and
+                                passenger enplanement), as well as having the ability to pan and zoom. The size of the
+                                scatter point of each airplane is scaled based on that airport's passenger enplanements
+                                and I also added a color scale that utilizes passenger enplanements ( top 10 airports
+                                have unique colors while the rest use a color scale based on shades of blue). I felt
+                                this was a good design decision since it allows a viewer to see which airports have high
+                                passenger enplanements at a glance. The unique colors of the top 10 airports also match
+                                up with the Pie Chart which helps link the two visualizations together. Finally, I added
+                                a slider which can filter the airports based on passengers enplaned (both Pie Chart and
+                                Scatter Map). Since the dataset has a lot of airports that have a neglible amount of
+                                enplanements, it helps the viewer filter out the noise. It could also help them draw
+                                some additional insights from the data by looking at airports within a specific range of
+                                passenger enplanements. </p>
+                        </div>
+                        <div style="flex: .1;">
+                            <h3>Data Resources</h3>
+                            <p>Data was from Bureau of Transport (<a
+                                    href="https://www.bts.gov/browse-statistical-products-and-data/state-transportation-statistics/us-airline-traffic-airport">Source</a>).
+                                I took some inspiration from the Bureau of Transport's visualization on the dataset for
+                                my Scatter Map but I added additional functionality to the map and linked it with
+                                another visualization, a Pie Chart. </p>
+
+                        </div>
+                        <div style="flex:.4;">
+                            <h3>Development Process</h3>
+                            <p>I did the project solo, so none of the work was split. The development process was pretty
+                                straightforward as I already have experience using Plotly in an internship I did. I
+                                would say one aspect that was slightly challenging was deciding on how to color the
+                                scatter points. I made the map first with the color scale feature and then the pie
+                                chart. However I realized I needed to link the two charts together colorwise but I
+                                didn't want to get rid of the color scale feature on the map. I ended up striking a
+                                middle ground and just giving the top 10 airports on the map the pie chart color and the
+                                rest of the airports the color scale. I would say I spent about 3 hours on the project.
+                            </p>
+                        </div>
+
+
+                    </div>
     </div>
 
     <!-- Load Plotly and D3.js -->
